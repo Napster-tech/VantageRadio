@@ -1,0 +1,125 @@
+{
+  "stringTable": {},
+  "buildFiles": [
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/CMakeLists.txt",
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/CMakeLists.txt",
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/CMakeLists.txt",
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/CMakeLists.txt",
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/radio_control/CMakeLists.txt",
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/CMakeLists.txt",
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "radio-control-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+        "radio-control"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "radio-control",
+      "output": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/radio_control/libradio-control.a"
+    },
+    "mpegts-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+        "mpegts"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "mpegts",
+      "output": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts/libmpegts.a"
+    },
+    "vrts-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+        "vrts"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "vrts",
+      "output": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/libvrts.a"
+    },
+    "h265nal-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+        "h265nal"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "h265nal",
+      "output": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src/libh265nal.a"
+    },
+    "native-lib-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+        "native-lib"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "native-lib",
+      "output": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so",
+      "runtimeFiles": [
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libssl.so",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libssh.so",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libdecrepit.so",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libcrypto.so"
+      ]
+    },
+    "vrts-test-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+        "vrts-test"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "vrts-test",
+      "output": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a/vrts-test",
+      "runtimeFiles": []
+    },
+    "webrtc-Release-arm64-v8a": {
+      "buildCommandComponents": [
+        "/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+        "webrtc"
+      ],
+      "buildType": "release",
+      "abi": "arm64-v8a",
+      "artifactName": "webrtc",
+      "output": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/webrtc/libwebrtc.a"
+    }
+  },
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cc",
+    "cpp"
+  ]
+}

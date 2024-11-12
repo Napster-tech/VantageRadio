@@ -1,0 +1,298 @@
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"supportedProtocolVersions":[{"isExperimental":true,"major":1,"minor":1}],"type":"hello"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {
+  "type": "handshake",
+  "cookie": "gradle-cmake-cookie",
+  "protocolVersion": {
+    "isExperimental": true,
+    "major": 1,
+    "minor": 1
+  },
+  "sourceDirectory": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp",
+  "buildDirectory": "/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a",
+  "generator": "Ninja"
+}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"gradle-cmake-cookie","inReplyTo":"handshake","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {
+  "type": "configure",
+  "cacheArguments": [
+    "",
+    "-DCMAKE_CXX_FLAGS\u003d-std\u003dc++11",
+    "-DCMAKE_FIND_ROOT_PATH\u003d/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/prefab/arm64-v8a/prefab",
+    "-DCMAKE_BUILD_TYPE\u003dRelease",
+    "-DCMAKE_TOOLCHAIN_FILE\u003d/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake",
+    "-DANDROID_ABI\u003darm64-v8a",
+    "-DANDROID_NDK\u003d/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529",
+    "-DANDROID_PLATFORM\u003dandroid-29",
+    "-DCMAKE_ANDROID_ARCH_ABI\u003darm64-v8a",
+    "-DCMAKE_ANDROID_NDK\u003d/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON",
+    "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a",
+    "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a",
+    "-DCMAKE_MAKE_PROGRAM\u003d/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-DCMAKE_SYSTEM_NAME\u003dAndroid",
+    "-DCMAKE_SYSTEM_VERSION\u003d29"
+  ]
+}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":257,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":385,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":514,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":642,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"src: normal footprint selected","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: src: normal footprint selected
+CMAKE SERVER: src: normal footprint selected
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":771,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":900,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":914,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":928,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":942,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":957,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":971,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":985,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","progressCurrent":1000,"progressMaximum":1000,"progressMessage":"Configuring","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","message":"Configuring done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Configuring done
+CMAKE SERVER: Configuring done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"configure","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"compute"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":142,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":285,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":428,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":571,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":714,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":857,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","progressCurrent":1000,"progressMaximum":1000,"progressMessage":"Generating","progressMinimum":0,"type":"progress"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","message":"Generating done","type":"message"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: Generating done
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"cookie":"","inReplyTo":"compute","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"cmakeInputs"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"buildFiles":[{"isCMake":true,"isTemporary":false,"sources":["/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Initialize.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeGenericSystem.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Linux.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/UnixPaths.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCInformation.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-C.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/GNU.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-C.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCXXInformation.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang-CXX.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Compiler/Clang.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang-CXX.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/Platform/Android-Clang.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindThreads.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckLibraryExists.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckSymbolExists.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckIncludeFile.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindThreads.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckLibraryExists.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckSymbolExists.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckIncludeFile.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindThreads.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckLibraryExists.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckSymbolExists.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/CheckIncludeFile.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake","/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10/Modules/FindPackageMessage.cmake"]},{"isCMake":false,"isTemporary":false,"sources":["CMakeLists.txt","/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/build/cmake/android.toolchain.cmake","/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/build/cmake/platforms.cmake","radio_control/CMakeLists.txt","vrts/CMakeLists.txt","vrts/h265nal/CMakeLists.txt","vrts/h265nal/src/CMakeLists.txt","vrts/h265nal/src/config.h.in","vrts/h265nal/webrtc/CMakeLists.txt","vrts/mpegts/CMakeLists.txt"]},{"isCMake":false,"isTemporary":true,"sources":["../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeSystem.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCCompiler.cmake","../../../.cxx/cmake/release/arm64-v8a/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"]}],"cmakeRootDirectory":"/Users/abhishekmuttath/Library/Android/sdk/cmake/3.10.2.4988404/share/cmake-3.10","cookie":"","inReplyTo":"cmakeInputs","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"type":"codemodel"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+
+CMAKE SERVER: 
+
+CMAKE SERVER: [== "CMake Server" ==[
+
+CMAKE SERVER: {"configurations":[{"name":"Release","projects":[{"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal","name":"h265nal","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal","targets":[{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src/libh265nal.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -std=c++14 -O2 -DNDEBUG  -fPIC   -std=gnu++14","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["h265_common.cc","h265_utils.cc","h265_profile_tier_level_parser.cc","h265_sub_layer_hrd_parameters_parser.cc","h265_hrd_parameters_parser.cc","h265_vps_parser.cc","h265_vui_parameters_parser.cc","h265_pred_weight_table_parser.cc","h265_st_ref_pic_set_parser.cc","h265_sps_multilayer_extension_parser.cc","h265_sps_3d_extension_parser.cc","h265_sps_range_extension_parser.cc","h265_sps_scc_extension_parser.cc","h265_scaling_list_data_parser.cc","h265_sps_parser.cc","h265_pps_scc_extension_parser.cc","h265_pps_parser.cc","h265_aud_parser.cc","h265_sei_parser.cc","h265_rtp_ap_parser.cc","h265_rtp_fu_parser.cc","h265_rtp_single_parser.cc","h265_rtp_parser.cc","h265_slice_parser.cc","h265_bitstream_parser_state.cc","h265_bitstream_parser.cc","h265_nal_unit_header_parser.cc","h265_nal_unit_payload_parser.cc","h265_nal_unit_parser.cc"]}],"fullName":"libh265nal.a","linkerLanguage":"CXX","name":"h265nal","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/webrtc/libwebrtc.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/webrtc","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -std=c++14 -O2 -DNDEBUG  -fPIC   -std=gnu++14","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["rtc_base/bit_buffer.cc"]},{"isGenerated":false,"sources":["rtc_base/arraysize.h","rtc_base/bit_buffer.h"]}],"fullName":"libwebrtc.a","linkerLanguage":"CXX","name":"webrtc","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"}]},{"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts","name":"mpegts","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts","targets":[{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts/libmpegts.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIC   -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/unit_tests"}],"isGenerated":false,"language":"CXX","sources":["mpegts/common.cpp","mpegts/crc.cpp","mpegts/mpegts_demuxer.cpp","mpegts/mpegts_muxer.cpp","mpegts/simple_buffer.cpp","mpegts/ts_packet.cpp"]}],"fullName":"libmpegts.a","linkerLanguage":"CXX","name":"mpegts","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"}]},{"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a","name":"vantageradioui","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp","targets":[{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIC   -std=gnu++1z","defines":["native_lib_EXPORTS"],"includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["native-lib.cpp","VrtsVideoServer.cpp"]}],"fullName":"libnative-lib.so","linkFlags":"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments","linkLibraries":"radio_control/libradio-control.a vrts/libvrts.a -llog /Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libssl.so /Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libssh.so /Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libdecrepit.so /Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/libcrypto.so vrts/h265nal/src/libh265nal.a vrts/h265nal/webrtc/libwebrtc.a vrts/mpegts/libmpegts.a -latomic -lm","linkerLanguage":"CXX","name":"native-lib","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"SHARED_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/radio_control/libradio-control.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/radio_control","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIC   -Wall -Wextra -Wpedantic -Werror -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/radio_control_private"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/libs/libssh/android_libssh/include"}],"isGenerated":false,"language":"CXX","sources":["HelixControl.cpp","RadioControl.cpp","MicrohardControl.cpp","DTCControl.cpp","PoplarControl.cpp","DroneControl.cpp","FakeControl.cpp","radio_control_private/ByteArray.cpp","radio_control_private/Crc32.cpp","radio_control_private/DeviceDiscoveryProtocol.cpp","radio_control_private/DeviceDiscoveryProtocolMessage.cpp","radio_control_private/Encryption.cpp","radio_control_private/HostAddress.cpp","radio_control_private/MacAddress.cpp","radio_control_private/Network.cpp","radio_control_private/OperatingSystem.cpp","radio_control_private/RandomNumber.cpp","radio_control_private/StrUtils.cpp","radio_control_private/Trace.cpp","radio_control_private/UdpBroadcaster.cpp","radio_control_private/UdpSocket.cpp"]}],"fullName":"libradio-control.a","linkerLanguage":"CXX","name":"radio-control","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/radio_control","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/libvrts.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIC   -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["VRTS.cpp"]}],"fullName":"libvrts.a","linkerLanguage":"CXX","name":"vrts","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a/vrts-test"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIE   -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["test.cpp","FakeRadioLink.cpp","VRTS.cpp"]}],"fullName":"vrts-test","linkFlags":"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections","linkLanguageFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG","linkLibraries":"h265nal/src/libh265nal.a libvrts.a h265nal/src/libh265nal.a h265nal/webrtc/libwebrtc.a mpegts/libmpegts.a -latomic -lm","linkerLanguage":"CXX","name":"vrts-test","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"EXECUTABLE"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src/libh265nal.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -std=c++14 -O2 -DNDEBUG  -fPIC   -std=gnu++14","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["h265_common.cc","h265_utils.cc","h265_profile_tier_level_parser.cc","h265_sub_layer_hrd_parameters_parser.cc","h265_hrd_parameters_parser.cc","h265_vps_parser.cc","h265_vui_parameters_parser.cc","h265_pred_weight_table_parser.cc","h265_st_ref_pic_set_parser.cc","h265_sps_multilayer_extension_parser.cc","h265_sps_3d_extension_parser.cc","h265_sps_range_extension_parser.cc","h265_sps_scc_extension_parser.cc","h265_scaling_list_data_parser.cc","h265_sps_parser.cc","h265_pps_scc_extension_parser.cc","h265_pps_parser.cc","h265_aud_parser.cc","h265_sei_parser.cc","h265_rtp_ap_parser.cc","h265_rtp_fu_parser.cc","h265_rtp_single_parser.cc","h265_rtp_parser.cc","h265_slice_parser.cc","h265_bitstream_parser_state.cc","h265_bitstream_parser.cc","h265_nal_unit_header_parser.cc","h265_nal_unit_payload_parser.cc","h265_nal_unit_parser.cc"]}],"fullName":"libh265nal.a","linkerLanguage":"CXX","name":"h265nal","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/webrtc/libwebrtc.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/webrtc","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -std=c++14 -O2 -DNDEBUG  -fPIC   -std=gnu++14","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["rtc_base/bit_buffer.cc"]},{"isGenerated":false,"sources":["rtc_base/arraysize.h","rtc_base/bit_buffer.h"]}],"fullName":"libwebrtc.a","linkerLanguage":"CXX","name":"webrtc","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts/libmpegts.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIC   -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/unit_tests"}],"isGenerated":false,"language":"CXX","sources":["mpegts/common.cpp","mpegts/crc.cpp","mpegts/mpegts_demuxer.cpp","mpegts/mpegts_muxer.cpp","mpegts/simple_buffer.cpp","mpegts/ts_packet.cpp"]}],"fullName":"libmpegts.a","linkerLanguage":"CXX","name":"mpegts","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"}]},{"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts","name":"vrts","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts","targets":[{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/libvrts.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIC   -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["VRTS.cpp"]}],"fullName":"libvrts.a","linkerLanguage":"CXX","name":"vrts","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a/vrts-test"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIE   -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["test.cpp","FakeRadioLink.cpp","VRTS.cpp"]}],"fullName":"vrts-test","linkFlags":"-Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections","linkLanguageFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG","linkLibraries":"h265nal/src/libh265nal.a libvrts.a h265nal/src/libh265nal.a h265nal/webrtc/libwebrtc.a mpegts/libmpegts.a -latomic -lm","linkerLanguage":"CXX","name":"vrts-test","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"EXECUTABLE"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src/libh265nal.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -std=c++14 -O2 -DNDEBUG  -fPIC   -std=gnu++14","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src/../webrtc"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/src"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["h265_common.cc","h265_utils.cc","h265_profile_tier_level_parser.cc","h265_sub_layer_hrd_parameters_parser.cc","h265_hrd_parameters_parser.cc","h265_vps_parser.cc","h265_vui_parameters_parser.cc","h265_pred_weight_table_parser.cc","h265_st_ref_pic_set_parser.cc","h265_sps_multilayer_extension_parser.cc","h265_sps_3d_extension_parser.cc","h265_sps_range_extension_parser.cc","h265_sps_scc_extension_parser.cc","h265_scaling_list_data_parser.cc","h265_sps_parser.cc","h265_pps_scc_extension_parser.cc","h265_pps_parser.cc","h265_aud_parser.cc","h265_sei_parser.cc","h265_rtp_ap_parser.cc","h265_rtp_fu_parser.cc","h265_rtp_single_parser.cc","h265_rtp_parser.cc","h265_slice_parser.cc","h265_bitstream_parser_state.cc","h265_bitstream_parser.cc","h265_nal_unit_header_parser.cc","h265_nal_unit_payload_parser.cc","h265_nal_unit_parser.cc"]}],"fullName":"libh265nal.a","linkerLanguage":"CXX","name":"h265nal","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/src","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/webrtc/libwebrtc.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/h265nal/webrtc","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -std=c++14 -O2 -DNDEBUG  -fPIC   -std=gnu++14","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc"}],"isGenerated":false,"language":"CXX","sources":["rtc_base/bit_buffer.cc"]},{"isGenerated":false,"sources":["rtc_base/arraysize.h","rtc_base/bit_buffer.h"]}],"fullName":"libwebrtc.a","linkerLanguage":"CXX","name":"webrtc","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/webrtc","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"},{"artifacts":["/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts/libmpegts.a"],"buildDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a/vrts/mpegts","fileGroups":[{"compileFlags":"-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O2 -DNDEBUG  -fPIC   -std=gnu++1z","includePath":[{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/h265nal/include"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/mpegts"},{"path":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts/unit_tests"}],"isGenerated":false,"language":"CXX","sources":["mpegts/common.cpp","mpegts/crc.cpp","mpegts/mpegts_demuxer.cpp","mpegts/mpegts_muxer.cpp","mpegts/simple_buffer.cpp","mpegts/ts_packet.cpp"]}],"fullName":"libmpegts.a","linkerLanguage":"CXX","name":"mpegts","sourceDirectory":"/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/mpegts","sysroot":"/Users/abhishekmuttath/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot","type":"STATIC_LIBRARY"}]}]}],"cookie":"","inReplyTo":"codemodel","type":"reply"}
+
+CMAKE SERVER: ]== "CMake Server" ==]
+

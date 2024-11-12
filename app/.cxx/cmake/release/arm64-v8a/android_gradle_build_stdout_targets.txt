@@ -1,0 +1,100 @@
+ninja: Entering directory `/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a'
+[0/1] Re-running CMake...
+-- src: normal footprint selected
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/.cxx/cmake/release/arm64-v8a
+[1/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/Crc32.cpp.o
+[2/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/ByteArray.cpp.o
+[3/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/DroneControl.cpp.o
+[4/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/RadioControl.cpp.o
+[5/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/DeviceDiscoveryProtocol.cpp.o
+[6/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/Encryption.cpp.o
+[7/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/FakeControl.cpp.o
+[8/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/HostAddress.cpp.o
+[9/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/HelixControl.cpp.o
+[10/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/PoplarControl.cpp.o
+[11/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/Trace.cpp.o
+[12/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/OperatingSystem.cpp.o
+[13/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/RandomNumber.cpp.o
+[14/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/MacAddress.cpp.o
+[15/70] Building CXX object CMakeFiles/native-lib.dir/VrtsVideoServer.cpp.o
+[16/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/DeviceDiscoveryProtocolMessage.cpp.o
+[17/70] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+[18/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/Network.cpp.o
+[19/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/StrUtils.cpp.o
+[20/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/UdpSocket.cpp.o
+[21/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/radio_control_private/UdpBroadcaster.cpp.o
+[22/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_common.cc.o
+[23/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_utils.cc.o
+[24/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_profile_tier_level_parser.cc.o
+[25/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_sub_layer_hrd_parameters_parser.cc.o
+[26/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_hrd_parameters_parser.cc.o
+[27/70] Building CXX object vrts/CMakeFiles/vrts-test.dir/FakeRadioLink.cpp.o
+[28/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_pred_weight_table_parser.cc.o
+[29/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/MicrohardControl.cpp.o
+[30/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_vps_parser.cc.o
+[31/70] Building CXX object vrts/CMakeFiles/vrts-test.dir/test.cpp.o
+[32/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_vui_parameters_parser.cc.o
+[33/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_sps_multilayer_extension_parser.cc.o
+[34/70] Building CXX object vrts/CMakeFiles/vrts.dir/VRTS.cpp.o
+/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/VRTS.cpp:1269:39: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+            (output_state.running_poc & 1 == 0)) {
+                                      ^~~~~~~~
+/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/VRTS.cpp:1269:39: note: place parentheses around the '==' expression to silence this warning
+            (output_state.running_poc & 1 == 0)) {
+                                      ^
+                                        (     )
+/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/VRTS.cpp:1269:39: note: place parentheses around the & expression to evaluate it first
+            (output_state.running_poc & 1 == 0)) {
+                                      ^
+             (                           )
+1 warning generated.
+[35/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_st_ref_pic_set_parser.cc.o
+[36/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_sps_range_extension_parser.cc.o
+[37/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_sps_3d_extension_parser.cc.o
+[38/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_sps_scc_extension_parser.cc.o
+[39/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_pps_scc_extension_parser.cc.o
+[40/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_scaling_list_data_parser.cc.o
+[41/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_pps_parser.cc.o
+[42/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_bitstream_parser_state.cc.o
+[43/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_aud_parser.cc.o
+[44/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_sps_parser.cc.o
+[45/70] Building CXX object vrts/CMakeFiles/vrts-test.dir/VRTS.cpp.o
+/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/VRTS.cpp:1269:39: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+            (output_state.running_poc & 1 == 0)) {
+                                      ^~~~~~~~
+/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/VRTS.cpp:1269:39: note: place parentheses around the '==' expression to silence this warning
+            (output_state.running_poc & 1 == 0)) {
+                                      ^
+                                        (     )
+/Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/src/main/cpp/vrts/VRTS.cpp:1269:39: note: place parentheses around the & expression to evaluate it first
+            (output_state.running_poc & 1 == 0)) {
+                                      ^
+             (                           )
+1 warning generated.
+[46/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_sei_parser.cc.o
+[47/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_nal_unit_header_parser.cc.o
+[48/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_rtp_single_parser.cc.o
+[49/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_rtp_ap_parser.cc.o
+[50/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_rtp_fu_parser.cc.o
+[51/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_rtp_parser.cc.o
+[52/70] Building CXX object vrts/mpegts/CMakeFiles/mpegts.dir/mpegts/crc.cpp.o
+[53/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_slice_parser.cc.o
+[54/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_bitstream_parser.cc.o
+[55/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_nal_unit_parser.cc.o
+[56/70] Building CXX object vrts/h265nal/webrtc/CMakeFiles/webrtc.dir/rtc_base/bit_buffer.cc.o
+[57/70] Building CXX object vrts/mpegts/CMakeFiles/mpegts.dir/mpegts/common.cpp.o
+[58/70] Building CXX object vrts/h265nal/src/CMakeFiles/h265nal.dir/h265_nal_unit_payload_parser.cc.o
+[59/70] Linking CXX static library vrts/h265nal/webrtc/libwebrtc.a
+[60/70] Building CXX object vrts/mpegts/CMakeFiles/mpegts.dir/mpegts/simple_buffer.cpp.o
+[61/70] Building CXX object vrts/mpegts/CMakeFiles/mpegts.dir/mpegts/ts_packet.cpp.o
+[62/70] Building CXX object vrts/mpegts/CMakeFiles/mpegts.dir/mpegts/mpegts_demuxer.cpp.o
+[63/70] Building CXX object vrts/mpegts/CMakeFiles/mpegts.dir/mpegts/mpegts_muxer.cpp.o
+[64/70] Linking CXX static library vrts/mpegts/libmpegts.a
+[65/70] Linking CXX static library vrts/h265nal/src/libh265nal.a
+[66/70] Linking CXX static library vrts/libvrts.a
+[67/70] Linking CXX executable /Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a/vrts-test
+[68/70] Building CXX object radio_control/CMakeFiles/radio-control.dir/DTCControl.cpp.o
+[69/70] Linking CXX static library radio_control/libradio-control.a
+[70/70] Linking CXX shared library /Users/abhishekmuttath/Movies/Vantage_Robotics/bitbucket/REAL_VANTAGE/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so

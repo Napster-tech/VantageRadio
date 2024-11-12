@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">VantageRadioUI</string>
+    <string name="title_activity_main">VantageRadioControl</string>
+    <string name="tab_text_1">Control</string>
+    <string name="tab_text_2">Status</string>
+    <string name="tab_text_3">Settings</string>
+    <string name="large_text">"Default status text."</string>
+    <!-- Preference Titles -->
+    <string name="default_header">Persistent Settings</string>
+    <string name="channel_id">Vantage Radio Control</string>
+    <string name="channel_description">Vantage radio notifications.</string>
+
+    <!-- Default Preferences -->
+    <string name="network_id_preference">Network ID</string>
+    <string name="id_value">vantagevantage</string>
+    <string name="password_preference">Network Password</string>
+    <string name="password_value">testtest</string>
+
+    <string-array name="power_values">
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+</resources>
