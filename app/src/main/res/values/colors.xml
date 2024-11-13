@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- res/values/colors.xml -->
+    <color name="buttonColorPrimary">#6200EA</color> <!-- Primary button color -->
+    <color name="buttonBorderColor">#3700B3</color>  <!-- Border color -->
+    <color name="buttonTextColor">#FFFFFF</color>     <!-- Button text color -->
+
 </resources>

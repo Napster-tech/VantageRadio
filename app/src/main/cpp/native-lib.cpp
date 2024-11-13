@@ -105,6 +105,7 @@ Java_com_example_vantageradioui_ui_main_RadioControlFragment_enableRadio(JNIEnv*
     return 0;
 }
 
+
 extern "C"
 JNIEXPORT jboolean JNICALL
 Java_com_example_vantageradioui_ui_main_RadioControlFragment_isModemConnected(JNIEnv *env, jobject thiz) {
@@ -147,6 +148,25 @@ Java_com_example_vantageradioui_ui_main_RadioControlFragment_getSupportedFreqs(J
         i++;
     }
     return(freqs);
+}
+extern "C" JNIEXPORT jintArray JNICALL
+Java_com_example_vantageradioui_ui_main_RadioControlFragment_scanChannels(JNIEnv* env, jobject /* this */, jint sort, jint count, jfloat bw) {
+    // Ensure jni_wrap::radio_control is of type MicrohardControl
+    if (auto control = std::dynamic_pointer_cast<radio_control::MicrohardControl>(jni_wrap::radio_control)) {
+        // Call the ScanChannels function with the provided arguments
+        std::vector<int> channels = control->ScanChannels(static_cast<int>(sort), static_cast<int>(count), static_cast<float>(bw));
+
+        // Convert std::vector<int> to jintArray to return to Java
+        jintArray result = env->NewIntArray(channels.size());
+        if (result == nullptr) {
+            // Return an empty array if memory allocation fails
+            return env->NewIntArray(0);
+        }
+        env->SetIntArrayRegion(result, 0, channels.size(), channels.data());
+        return result;
+    }
+    // Return an empty array if jni_wrap::radio_control is not of type MicrohardControl
+    return env->NewIntArray(0);
 }
 
 extern "C" JNIEXPORT jobjectArray JNICALL

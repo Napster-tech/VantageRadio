@@ -129,6 +129,8 @@ namespace radio_control {
         virtual std::string GetFirmwareVersionString(void) const override { return radio_info.software_version; }
         virtual bool NeedsFirmwareUpgrade(const std::string& firmware_filename) override;
 
+        std::vector<int> ScanChannels(int sort, int count, float bw);
+
     private:
         typedef struct {
             int rssi;
@@ -197,7 +199,7 @@ namespace radio_control {
         std::string SelectMicrohardIP(const std::vector<std::string>& ips, const std::string& ipconfig);
         void Breadcrumb(bool leave);
         bool SupportsFrequencyHopping(void) const;
-        std::vector<int> ScanChannels(int sort, int count, float bw);
+
         std::vector<int> ScanChannels1800(int band, int count, float bw);
 
         std::deque<radio_control::QueueItem> config_queue;

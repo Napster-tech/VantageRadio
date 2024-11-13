@@ -16,17 +16,23 @@
         android:installLocation="internalOnly"
         android:supportsRtl="true"
         android:theme="@style/Theme.VantageRadioUI">
+
+        <!-- Main activity with exported attribute -->
         <activity
             android:name=".VantageRadioControl"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.VantageRadioUI.NoActionBar">
+            android:theme="@style/Theme.VantageRadioUI.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="com.example.vantageradioui.VantageRadioControl" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".BootReceiver" >
+
+        <!-- BootReceiver with exported attribute -->
+        <receiver
+            android:name=".BootReceiver"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
@@ -40,5 +46,6 @@
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
             </intent-filter>
         </receiver>
+
     </application>
 </manifest>

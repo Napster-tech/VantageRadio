@@ -1,6 +1,7 @@
 package com.example.vantageradioui.ui.main
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -14,12 +15,17 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.example.vantageradioui.R
 import com.example.vantageradioui.databinding.FragmentMainBinding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.WriterException
 import com.journeyapps.barcodescanner.BarcodeEncoder
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.util.*
 
 class RadioControlFragment : Fragment() {
@@ -30,7 +36,6 @@ class RadioControlFragment : Fragment() {
     private var firstInit: Boolean = true
     private var firstInitUnconfigured: Boolean = true
 
-    // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -40,13 +45,11 @@ class RadioControlFragment : Fragment() {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         super.onCreate(savedInstanceState)
 
-        val prefs = activity!!.getSharedPreferences("vantageradioprefs", Context.MODE_PRIVATE)
+        val prefs = requireActivity().getSharedPreferences("vantageradioprefs", Context.MODE_PRIVATE)
         val editor = prefs.edit()
 
         fun updateUI() {
             val state: String = getState()
-
-            // Check connection status and update drone connection text
             if (isModemConnected()) {
                 binding.heartbeatStatus.text = "Drone Connected"
                 binding.heartbeatStatus.setTextColor(resources.getColor(android.R.color.holo_green_dark, null))
@@ -55,24 +58,20 @@ class RadioControlFragment : Fragment() {
                 binding.heartbeatStatus.setTextColor(resources.getColor(android.R.color.holo_red_dark, null))
             }
 
-            // Update other UI components based on the state
             if (state == "UNKNOWN" || state == "BOOTING" || state == "CONFIGURING" || state == "REMOVED") {
                 binding.freqSpinner.isEnabled = false
                 binding.bwSpinner.isEnabled = false
                 binding.pairingViewButton.isEnabled = false
                 binding.applySettings.isEnabled = false
+                binding.scanChannelsButton.isEnabled=false
                 firstInit = true
             } else {
                 if (firstInit) {
                     val freqs: Array<Int> = getSupportedFreqs()
                     val bws: Array<Float> = getSupportedBWs()
 
-                    val freqSpinnerArrayAdapter = ArrayAdapter(
-                        requireContext(), android.R.layout.simple_spinner_item, freqs
-                    )
-                    val bwSpinnerArrayAdapter = ArrayAdapter(
-                        requireContext(), android.R.layout.simple_spinner_item, bws
-                    )
+                    val freqSpinnerArrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, freqs)
+                    val bwSpinnerArrayAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, bws)
 
                     binding.freqSpinner.adapter = freqSpinnerArrayAdapter
                     binding.bwSpinner.adapter = bwSpinnerArrayAdapter
@@ -102,6 +101,7 @@ class RadioControlFragment : Fragment() {
 
                 binding.freqSpinner.isEnabled = true
                 binding.bwSpinner.isEnabled = true
+                binding.scanChannelsButton.isEnabled=true
                 binding.pairingViewButton.isEnabled = true
                 binding.applySettings.isEnabled = true
             }
@@ -120,7 +120,7 @@ class RadioControlFragment : Fragment() {
 
             editor.putString("networkID", binding.networkID.text.toString())
             editor.putString("networkPass", binding.networkPassword.text.toString())
-            editor.commit()
+            editor.apply()
 
             applySettings()
 
@@ -149,7 +149,7 @@ class RadioControlFragment : Fragment() {
                 enableRadio(isChecked, radio)
                 editor.putBoolean("radioEnabled", isChecked)
                 editor.putInt("radioSelection", radio)
-                editor.commit()
+                editor.apply()
             }
 
             lastRadioEnabledState = isChecked
@@ -185,6 +185,43 @@ class RadioControlFragment : Fragment() {
             binding.radioButtonSBS.visibility = View.INVISIBLE
         }
 
+        // Scan Channels Button with loading animation and best frequency suggestion
+        binding.scanChannelsButton.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
+
+            lifecycleScope.launch(Dispatchers.IO) {
+                val sort = 1
+                val count = 10
+                val bw = getBW()
+                val scannedChannels = scanChannels(sort, count, bw)
+
+                withContext(Dispatchers.Main) {
+                    binding.progressBar.visibility = View.GONE
+
+                    if (scannedChannels.isNotEmpty()) {
+                        val bestFrequency = scannedChannels.first() // Assuming first one is best, customize as needed
+                        val bestFrequencyIndex = getSupportedFreqs().indexOf(bestFrequency)
+
+                        // Show dialog to ask if user wants to apply the best frequency
+                        AlertDialog.Builder(requireContext())
+                            .setTitle("Best Frequency Found")
+                            .setMessage("The best available frequency is $bestFrequency. Would you like to apply it?")
+                            .setPositiveButton("Yes") { _, _ ->
+                                // Set the frequency in spinner if user agrees
+                                if (bestFrequencyIndex != -1) {
+                                    binding.freqSpinner.setSelection(bestFrequencyIndex)
+                                    Toast.makeText(requireContext(), "Frequency set to $bestFrequency", Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                            .setNegativeButton("No", null)
+                            .show()
+                    } else {
+                        Toast.makeText(requireContext(), "No channels found.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+
         if (!timerStarted) {
             Timer().scheduleAtFixedRate(object : TimerTask() {
                 override fun run() {
@@ -200,7 +237,6 @@ class RadioControlFragment : Fragment() {
 
         updateUI()
 
-        // Set up the touch listener for the ScrollView to clear focus when touched outside the EditText fields
         binding.scrollView.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_DOWN) {
                 clearFocusAndHideKeyboard()
@@ -208,7 +244,6 @@ class RadioControlFragment : Fragment() {
             false
         }
 
-        // Set up focus change listeners for the EditText fields to clear focus on done
         binding.networkID.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 clearFocusAndHideKeyboard()
@@ -227,13 +262,10 @@ class RadioControlFragment : Fragment() {
     private fun clearFocusAndHideKeyboard() {
         binding.networkID.clearFocus()
         binding.networkPassword.clearFocus()
-
-        // Hide the keyboard
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(binding.root.windowToken, 0)
     }
 
-    // Native method declarations
     external fun SetOutputPower(value: Int)
     external fun stringFromJNI(): String
     external fun enableRadio(enable: Boolean, type: Int): Int
@@ -250,19 +282,16 @@ class RadioControlFragment : Fragment() {
     external fun getBW(): Float
     external fun getPower(): Int
     external fun isModemConnected(): Boolean
+    external fun scanChannels(sort: Int, count: Int, bw: Float): IntArray
 
     fun generateQR(content: String?, size: Int): Bitmap? {
-        var bitmap: Bitmap? = null
-        try {
+        return try {
             val barcodeEncoder = BarcodeEncoder()
-            bitmap = barcodeEncoder.encodeBitmap(
-                content,
-                BarcodeFormat.QR_CODE, size, size
-            )
+            barcodeEncoder.encodeBitmap(content, BarcodeFormat.QR_CODE, size, size)
         } catch (e: WriterException) {
-            Log.e("generateQR()", "Issue!")
+            Log.e("generateQR()", "Issue!", e)
+            null
         }
-        return bitmap
     }
 
     override fun onDestroyView() {

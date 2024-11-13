@@ -12,6 +12,7 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:paddingBottom="50dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- Radio Group -->
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
@@ -36,200 +38,228 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Vesper"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/radioButtonSBS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Trace"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
             </RadioGroup>
 
+            <!-- Enable Radio Control Switch -->
             <Switch
                 android:id="@+id/enableRadioControlSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Enable Radio Control"
-                android:textSize="20sp"
-                android:padding="8dp"
+                android:textSize="16sp"
+                android:padding="4dp"
                 app:layout_constraintTop_toBottomOf="@+id/radioGroup"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="24dp" />
+                android:layout_marginTop="16dp" />
 
-            <!-- Radio Status -->
+            <!-- Radio Status TextView -->
             <TextView
                 android:id="@+id/radioStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
                 android:text="Status: Disconnected"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@+id/heartbeatStatus"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/enableRadioControlSwitch" />
 
-            <!-- Heartbeat Status for Drone Connection -->
+            <!-- Heartbeat Status TextView -->
             <TextView
                 android:id="@+id/heartbeatStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
                 android:text="Drone Disconnected"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textColor="@android:color/holo_red_dark"
                 app:layout_constraintStart_toEndOf="@+id/radioStatus"
                 app:layout_constraintTop_toBottomOf="@+id/enableRadioControlSwitch"
                 app:layout_constraintEnd_toEndOf="parent" />
 
+            <!-- Frequency Label and Spinner -->
             <TextView
                 android:id="@+id/frequencyLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Frequency"
-                android:textSize="18sp"
-                android:layout_marginTop="24dp"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/radioStatus"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/freqSpinner"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="12dp" />
 
             <Spinner
                 android:id="@+id/freqSpinner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toEndOf="@+id/frequencyLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioStatus" />
 
+            <!-- Bandwidth Label and Spinner -->
             <TextView
                 android:id="@+id/bwLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bandwidth"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@+id/freqSpinner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/bwSpinner"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="12dp" />
 
             <Spinner
                 android:id="@+id/bwSpinner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintStart_toEndOf="@+id/bwLabel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/freqSpinner" />
 
+            <!-- Output Power Label and Spinner -->
             <TextView
                 android:id="@+id/powerLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Output Power"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@+id/bwSpinner"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="12dp" />
 
             <Spinner
                 android:id="@+id/powerSpinner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@+id/bwSpinner"
                 app:layout_constraintStart_toEndOf="@+id/powerLabel"
                 app:layout_constraintEnd_toEndOf="parent" />
 
+            <!-- Network ID Label and EditText -->
             <TextView
                 android:id="@+id/idLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Network ID"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@+id/powerSpinner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/networkID"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="12dp" />
 
             <EditText
                 android:id="@+id/networkID"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="Enter Network ID"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 app:layout_constraintTop_toTopOf="@+id/idLabel"
                 app:layout_constraintStart_toEndOf="@+id/idLabel"
                 app:layout_constraintEnd_toEndOf="parent" />
 
+            <!-- Encryption ID Label and Password EditText -->
             <TextView
-                android:id="@+id/pwLablel"
+                android:id="@+id/pwLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Encryption ID"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@+id/networkID"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/networkPassword"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="12dp" />
 
             <EditText
                 android:id="@+id/networkPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="Enter Password"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:inputType="textPassword"
-                app:layout_constraintTop_toTopOf="@+id/pwLablel"
-                app:layout_constraintStart_toEndOf="@+id/pwLablel"
+                app:layout_constraintTop_toTopOf="@+id/pwLabel"
+                app:layout_constraintStart_toEndOf="@+id/pwLabel"
                 app:layout_constraintEnd_toEndOf="parent" />
 
+            <!-- Version Text -->
             <TextView
                 android:id="@+id/editTextNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Version 0.1.5"
-                android:textSize="16sp"
-                android:layout_marginTop="16dp"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintTop_toBottomOf="@+id/networkPassword"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <Button
-                android:id="@+id/applySettings"
-                android:layout_width="wrap_content"
+            <!-- Buttons in a Horizontal Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:padding="8dp"
-                android:background="@color/black"
-                android:text="Apply Settings"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber">
 
-            <Button
-                android:id="@+id/pairingViewButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="40dp"
-                android:padding="8dp"
-                android:text="Display Pairing Code"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/applySettings" />
+                <Button
+                    android:id="@+id/applySettings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="Apply Settings"
+                    android:textSize="12sp"
+                    android:textColor="@color/buttonTextColor" />
 
+                <Button
+                    android:id="@+id/scanChannelsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="Channel Scan"
+                    android:textSize="12sp"
+                    android:textColor="@color/buttonTextColor" />
+
+                <Button
+                    android:id="@+id/pairingViewButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="Display Pairing Code"
+                    android:textSize="12sp"
+                    android:textColor="@color/buttonTextColor" />
+
+            </LinearLayout>
+
+            <!-- QR Code ImageView -->
             <ImageView
                 android:id="@+id/qrCode"
                 android:layout_width="200dp"
@@ -242,6 +272,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@android:drawable/screen_background_dark_transparent" />
 
+            <!-- Close QR Code Button -->
             <ImageButton
                 android:id="@+id/closeQrCodeButton"
                 android:layout_width="40dp"
@@ -254,6 +285,18 @@
                 app:layout_constraintEnd_toStartOf="@id/qrCode"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp" />
+
+            <!-- ProgressBar for loading animation -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:indeterminate="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
