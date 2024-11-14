@@ -1,9 +1,6 @@
 package com.example.vantageradioui.ui.main
-
-import android.content.Context
-import android.content.DialogInterface
-import android.content.res.Resources
 import android.graphics.Bitmap
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
@@ -31,12 +29,22 @@ import java.util.*
 class RadioControlFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
-    private var lastRadioEnabledState: Boolean = false
+    private val binding get() = _binding!!
     private var timerStarted: Boolean = false
     private var firstInit: Boolean = true
-    private var firstInitUnconfigured: Boolean = true
+    private var qrCodeSize = 200 // Default QR code size
 
-    private val binding get() = _binding!!
+    companion object {
+        private const val ENCRYPTION_KEY_PREF = "encryptionKey"
+        private const val ENCRYPTION_KEY_LENGTH = 16
+    }
+
+    private fun generateRandomKey(length: Int): String {
+        val allowedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        return (1..length)
+            .map { allowedChars.random() }
+            .joinToString("")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,6 +55,24 @@ class RadioControlFragment : Fragment() {
 
         val prefs = requireActivity().getSharedPreferences("vantageradioprefs", Context.MODE_PRIVATE)
         val editor = prefs.edit()
+
+        // Retrieve or generate a default encryption key and set it in networkPassword
+        var encryptionKey = prefs.getString(ENCRYPTION_KEY_PREF, null)
+        if (encryptionKey == null) {
+            encryptionKey = generateRandomKey(ENCRYPTION_KEY_LENGTH)
+            editor.putString(ENCRYPTION_KEY_PREF, encryptionKey)
+            editor.apply()
+        }
+        binding.networkPassword.setText(encryptionKey)
+
+        // Set up the refresh key button to generate a new encryption key
+        binding.refreshKeyButton.setOnClickListener {
+            val newKey = generateRandomKey(ENCRYPTION_KEY_LENGTH)
+            binding.networkPassword.setText(newKey)
+            editor.putString(ENCRYPTION_KEY_PREF, newKey)
+            editor.apply()
+            Toast.makeText(requireContext(), "New encryption key generated", Toast.LENGTH_SHORT).show()
+        }
 
         fun updateUI() {
             val state: String = getState()
@@ -63,7 +89,7 @@ class RadioControlFragment : Fragment() {
                 binding.bwSpinner.isEnabled = false
                 binding.pairingViewButton.isEnabled = false
                 binding.applySettings.isEnabled = false
-                binding.scanChannelsButton.isEnabled=false
+                binding.scanChannelsButton.isEnabled = false
                 firstInit = true
             } else {
                 if (firstInit) {
@@ -101,7 +127,7 @@ class RadioControlFragment : Fragment() {
 
                 binding.freqSpinner.isEnabled = true
                 binding.bwSpinner.isEnabled = true
-                binding.scanChannelsButton.isEnabled=true
+                binding.scanChannelsButton.isEnabled = true
                 binding.pairingViewButton.isEnabled = true
                 binding.applySettings.isEnabled = true
             }
@@ -130,62 +156,85 @@ class RadioControlFragment : Fragment() {
         }
 
         binding.enableRadioControlSwitch.setOnCheckedChangeListener { _, isChecked ->
-            var radio: Int = if (binding.radioButtonMH.isChecked) 1 else if (binding.radioButtonSBS.isChecked) 3 else 0
+            val radioType = if (binding.radioButtonMH.isChecked) 1 else if (binding.radioButtonSBS.isChecked) 3 else 0
 
-            binding.networkPassword.visibility = if (radio == 3) View.INVISIBLE else View.VISIBLE
-            binding.bwSpinner.visibility = if (radio == 3) View.INVISIBLE else View.VISIBLE
-            binding.freqSpinner.visibility = if (radio == 3) View.INVISIBLE else View.VISIBLE
+            val isEnabled = isChecked
+            binding.freqSpinner.isEnabled = isEnabled
+            binding.bwSpinner.isEnabled = isEnabled
+            binding.scanChannelsButton.isEnabled = isEnabled
+            binding.pairingViewButton.isEnabled = isEnabled
+            binding.applySettings.isEnabled = isEnabled
+            binding.networkID.isEnabled = isEnabled
+            binding.networkPassword.isEnabled = isEnabled
+            binding.powerSpinner.isEnabled = isEnabled
+            binding.radioButtonMH.isEnabled = !isEnabled
+            binding.radioButtonSBS.isEnabled = !isEnabled
 
-            binding.radioButtonMH.isEnabled = !isChecked
-            binding.radioButtonSBS.isEnabled = !isChecked
-
-            if (firstInitUnconfigured) {
-                lastRadioEnabledState = prefs.getBoolean("radioEnabled", false)
-                radio = prefs.getInt("radioSelection", 0)
-                if (radio == 1) binding.radioButtonMH.isChecked = true
-                else if (radio == 3) binding.radioButtonSBS.isChecked = true
-                enableRadio(lastRadioEnabledState, radio)
-            } else if (lastRadioEnabledState != isChecked) {
-                enableRadio(isChecked, radio)
-                editor.putBoolean("radioEnabled", isChecked)
-                editor.putInt("radioSelection", radio)
-                editor.apply()
+            if (!isEnabled) {
+                enableRadio(false, radioType)
+                Toast.makeText(requireContext(), "Radio Control Disabled", Toast.LENGTH_SHORT).show()
+            } else {
+                enableRadio(true, radioType)
             }
 
-            lastRadioEnabledState = isChecked
+            editor.putBoolean("radioEnabled", isChecked)
+            editor.putInt("radioSelection", radioType)
+            editor.apply()
+
             updateUI()
         }
 
         binding.closeQrCodeButton.setOnClickListener {
             binding.qrCode.visibility = View.INVISIBLE
+            binding.qrSizeSeekBar.visibility = View.INVISIBLE
             binding.closeQrCodeButton.visibility = View.INVISIBLE
-            binding.pairingViewButton.visibility = View.VISIBLE
+
+            binding.freqSpinner.visibility = View.VISIBLE
+            binding.bwSpinner.visibility = View.VISIBLE
             binding.applySettings.visibility = View.VISIBLE
             binding.radioButtonMH.visibility = View.VISIBLE
             binding.radioButtonSBS.visibility = View.VISIBLE
+            binding.scanChannelsButton.visibility = View.VISIBLE
+            binding.networkID.visibility = View.VISIBLE
+            binding.networkPassword.visibility = View.VISIBLE
+            binding.powerSpinner.visibility = View.VISIBLE
+            binding.frequencyLabel.visibility = View.VISIBLE
+            binding.bwLabel.visibility = View.VISIBLE
+            binding.powerLabel.visibility = View.VISIBLE
+            binding.idLabel.visibility = View.VISIBLE
+            binding.pwLabel.visibility = View.VISIBLE
+            binding.radioStatus.visibility = View.VISIBLE
+            binding.heartbeatStatus.visibility = View.VISIBLE
         }
 
         binding.pairingViewButton.setOnClickListener {
-            val width: Int = Resources.getSystem().getDisplayMetrics().widthPixels
-            val height: Int = Resources.getSystem().getDisplayMetrics().heightPixels
             val bwString: String = if (binding.radioButtonMH.isChecked) "%.0f".format(getBW()) else "%.1f".format(getBW())
             val qrContent = "${binding.networkID.text}//${binding.networkPassword.text}//${getFreq()}//${getPower()}//$bwString//station//192.168.20.4"
 
-            if (width > height) {
-                binding.qrCode.setImageBitmap(generateQR(qrContent, height))
-            } else {
-                binding.qrCode.setImageBitmap(generateQR(qrContent, width))
-            }
+            generateAndDisplayQRCode(qrContent, qrCodeSize)
 
             binding.qrCode.visibility = View.VISIBLE
+            binding.qrSizeSeekBar.visibility = View.VISIBLE
             binding.closeQrCodeButton.visibility = View.VISIBLE
-            binding.pairingViewButton.visibility = View.INVISIBLE
+
+            binding.freqSpinner.visibility = View.INVISIBLE
+            binding.bwSpinner.visibility = View.INVISIBLE
             binding.applySettings.visibility = View.INVISIBLE
             binding.radioButtonMH.visibility = View.INVISIBLE
             binding.radioButtonSBS.visibility = View.INVISIBLE
+            binding.scanChannelsButton.visibility = View.INVISIBLE
+            binding.networkID.visibility = View.INVISIBLE
+            binding.networkPassword.visibility = View.INVISIBLE
+            binding.powerSpinner.visibility = View.INVISIBLE
+            binding.frequencyLabel.visibility = View.INVISIBLE
+            binding.bwLabel.visibility = View.INVISIBLE
+            binding.powerLabel.visibility = View.INVISIBLE
+            binding.idLabel.visibility = View.INVISIBLE
+            binding.pwLabel.visibility = View.INVISIBLE
+            binding.radioStatus.visibility = View.INVISIBLE
+            binding.heartbeatStatus.visibility = View.INVISIBLE
         }
 
-        // Scan Channels Button with loading animation and best frequency suggestion
         binding.scanChannelsButton.setOnClickListener {
             binding.progressBar.visibility = View.VISIBLE
 
@@ -199,15 +248,13 @@ class RadioControlFragment : Fragment() {
                     binding.progressBar.visibility = View.GONE
 
                     if (scannedChannels.isNotEmpty()) {
-                        val bestFrequency = scannedChannels.first() // Assuming first one is best, customize as needed
+                        val bestFrequency = scannedChannels.first()
                         val bestFrequencyIndex = getSupportedFreqs().indexOf(bestFrequency)
 
-                        // Show dialog to ask if user wants to apply the best frequency
                         AlertDialog.Builder(requireContext())
                             .setTitle("Best Frequency Found")
                             .setMessage("The best available frequency is $bestFrequency. Would you like to apply it?")
                             .setPositiveButton("Yes") { _, _ ->
-                                // Set the frequency in spinner if user agrees
                                 if (bestFrequencyIndex != -1) {
                                     binding.freqSpinner.setSelection(bestFrequencyIndex)
                                     Toast.makeText(requireContext(), "Frequency set to $bestFrequency", Toast.LENGTH_SHORT).show()
@@ -221,6 +268,18 @@ class RadioControlFragment : Fragment() {
                 }
             }
         }
+
+        binding.qrSizeSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                qrCodeSize = progress.coerceIn(100, 500)
+                val bwString = if (binding.radioButtonMH.isChecked) "%.0f".format(getBW()) else "%.1f".format(getBW())
+                val qrContent = "${binding.networkID.text}//${binding.networkPassword.text}//${getFreq()}//${getPower()}//$bwString//station//192.168.20.4"
+                generateAndDisplayQRCode(qrContent, qrCodeSize)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
 
         if (!timerStarted) {
             Timer().scheduleAtFixedRate(object : TimerTask() {
@@ -257,6 +316,10 @@ class RadioControlFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    private fun generateAndDisplayQRCode(content: String, size: Int) {
+        binding.qrCode.setImageBitmap(generateQR(content, size))
     }
 
     private fun clearFocusAndHideKeyboard() {
